@@ -1,27 +1,4 @@
 #include<stdio.h>
-//Zad 1
-int FiboTree(int n,int i)
-{
-	i+=1;
-    int answer=0;
-
-    if (n==0){
-        answer = 0;
-    }
-    else if (n==1){
-        answer = 1;
-    }
-    else{
-    answer = FiboTree(n-1,i)+FiboTree(n-2,i);
-    }
-
-    printf("%d - FiboTree(%d) = %d\n",i,n,answer);
-
-    return answer;
-}
-// sprawdź czy drzewo wywołań z wcześniejszego zadania zostało poprawnie narysowane
-// drzewo zostało poprawnie narysowane
-
 //Zad 2
 float a1(int n)
 {
@@ -205,45 +182,9 @@ void Sequence(int n)
     printf("a3(%d) = %f\n",n,a3(n));
 }
 
-//Zad 3
-float a1Tree(int n,int i)
-{
-    float answer;
-	i+=1;
-	if(n==0)
-    {
-		answer = 1;
-    }
-	else if(n==1)
-    {
-        answer = 4;
-    }
-	else
-    {
-        answer = 2*a1Tree(n-1,i)+0.5*a1Tree(n-2,i);
-    }        
-
-    printf("%d - a1Tree(%d) = %f\n",i,n,answer);
-
-    return answer;
-}
-// Zad 3
-void SequenceTree(int n)
-{
-    a1Tree(n,0);
-}
-// sprawdź czy drzewo wywołań z wcześniejszego zadania zostało poprawnie narysowane
-// poprawne
-
-//Zad 4
-//nie zrobione
-
-
 void main(){
-	// printf("a2(%d) = %f\n",4,a2(4));
+    // printf("a1(%d) = %f\n",4,a1(4));
+    // printf("a2(%d) = %f\n",4,a2(4));
 	// printf("a3(%d) = %f\n",4,a3(4));
-	// FiboTree(4,0);
-    // Sequence(4);
-    // printf("==================================\n");
-    SequenceTree(4);
+    Sequence(4);
 }
