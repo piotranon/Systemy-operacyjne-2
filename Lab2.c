@@ -1,7 +1,8 @@
 #include<stdio.h>
 //Zad 1
-int fibo1(int n)
+int FiboTree(int n,int i)
 {
+	i+=1;
     int answer=0;
 
     if (n==0){
@@ -11,10 +12,10 @@ int fibo1(int n)
         answer = 1;
     }
     else{
-    answer = fibo1(n-1)+fibo1(n-2);
+    answer = FiboTree(n-1,i)+FiboTree(n-2,i);
     }
 
-    printf("fibo1(%d) = %d\n",n,answer);
+    printf("%d - FiboTree(%d) = %d\n",i,n,answer);
 
     return answer;
 }
@@ -68,7 +69,6 @@ float a2(int n)
 
 //analiza wywołania a2(4)
 /*
-
 	wywołanie a2(4)
 	n=4;
 	
@@ -100,11 +100,30 @@ float a2(int n)
 	return a1; [42.25]
 */
 /*
-graf obliczeń ? how to a1(4)
+graf obliczeń a2(4)
+
+        a2(4)
+		if(n==0) --------- zwroc 1
+        a0 = 1
+        a1 = 4
+        a2 = 2*a1+0.5*a0;[8.5]
+        i = 1
+        if(i<n)  <----------------------
+       /       \                       |
+(i>=n)/         \(i<n)                 |
+     /           \                     |
+  zwroc a1      a0 = a1                |
+                a1 = a2                |
+                a2 = 2*a1+0.5*a0;[8.5] |
+                i += 1                 |
+                   |                   |
+                    --------------------
 */
 //Zad 2_2
 float a3(int n)
 {
+	if(n==0)
+		return 1;
 	float a0=1;
 	float a1=4;
 	int i=1;
@@ -116,7 +135,7 @@ float a3(int n)
 	}
 	return a1;
 }
-//ramka trojzebna do a2
+//ramka dwojzebna do a3
 /*
 	a0    a1
 	| --- | 
@@ -134,7 +153,6 @@ float a3(int n)
 
 /*
 analiza wywołania a3(4)
-
 a3(4)
 
 n=4;
@@ -162,7 +180,23 @@ petla i<n [4<4] [false]
 */
 /*
 graf obliczeń a3(4)
-idk
+
+        a3(4)
+		if(n==0) --------- zwroc 1
+        a0 = 1
+        a1 = 4
+        a2 = 2*a1+0.5*a0;[8.5]
+        i = 1
+        if(i<n)  <----------------------
+       /       \                       |
+(i>=n)/         \(i<n)                 |
+     /           \                     |
+  zwroc a1      a0 = a1                |
+                a1 = a2                |
+                a2 = 2*a1+0.5*a0;[8.5] |
+                i += 1                 |
+                   |                   |
+                    --------------------
 */
 void Sequence(int n)
 {
@@ -172,10 +206,10 @@ void Sequence(int n)
 }
 
 //Zad 3
-float a1Tree(int n)
+float a1Tree(int n,int i)
 {
     float answer;
-
+	i+=1;
 	if(n==0)
     {
 		answer = 1;
@@ -186,17 +220,17 @@ float a1Tree(int n)
     }
 	else
     {
-        answer = 2*a1Tree(n-1)+0.5*a1Tree(n-2);
+        answer = 2*a1Tree(n-1,i)+0.5*a1Tree(n-2,i);
     }        
 
-    printf("a1Tree(%d) = %f\n",n,answer);
+    printf("%d - a1Tree(%d) = %f\n",i,n,answer);
 
     return answer;
 }
 // Zad 3
 void SequenceTree(int n)
 {
-    a1Tree(n);
+    a1Tree(n,0);
 }
 // sprawdź czy drzewo wywołań z wcześniejszego zadania zostało poprawnie narysowane
 // poprawne
@@ -206,7 +240,10 @@ void SequenceTree(int n)
 
 
 void main(){
-    Sequence(4);
-    printf("==================================\n");
+	// printf("a2(%d) = %f\n",4,a2(4));
+	// printf("a3(%d) = %f\n",4,a3(4));
+	// FiboTree(4,0);
+    // Sequence(4);
+    // printf("==================================\n");
     SequenceTree(4);
 }
