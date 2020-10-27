@@ -112,7 +112,7 @@ struct Fraction doMagic(struct Fraction x)
     return y;
 }
 
-
+//Zad.2.2
 void printFraction(struct Fraction x){
     
     int a = x.num;
@@ -157,6 +157,7 @@ void printFraction(struct Fraction x){
     printf("(struct Fraction){%d,%d} -> %d/%d\n",a,b,y.num,y.den);
     return;
 }
+//Zad.2.1
 void print(struct Fraction x,struct Fraction y, const char op)
 {
     struct Fraction solution;
@@ -232,44 +233,7 @@ bool isNumber(char s[])
 }
 
 void main() {
-    char input1[20],input2[20];
-    int number1,number2;
+    // testprint();
 
-    printf("Podaj licznik: ");
-
-    while(1)
-    {
-        gets(input1);
-
-        if(isNumber(input1))
-            break;
-
-        printf("Podales bledna liczbe sprobuj ponownie : ");
-    }
-    number1 = atoi(input1);
-
-    printf("Podaj mianownik: ");
-
-    while(1)
-    {
-        gets(input2);
-
-        if(isNumber(input2))
-            break;
-
-        printf("Podales bledna liczbe sprobuj ponownie : ");
-    }
-    number2 = atoi(input2);
-
-    struct Fraction test;
-    test.num = number1;
-    test.den = number2;
-
-    // printFraction(test);
-
-
-    testprint();
-
-    // testprintFraction();
-
+    testprintFraction();
 }

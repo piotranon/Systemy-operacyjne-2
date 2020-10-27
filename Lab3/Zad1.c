@@ -232,44 +232,36 @@ bool isNumber(char s[])
 }
 
 void main() {
-    char input1[20],input2[20];
-    int number1,number2;
+    // char input1[20],input2[20];
+    // int number1,number2;
 
-    printf("Podaj licznik: ");
+    // printf("Podaj licznik: ");
 
-    while(1)
-    {
-        gets(input1);
+    // while(1)
+    // {
+    //     gets(input1);
 
-        if(isNumber(input1))
-            break;
+    //     if(isNumber(input1))
+    //         break;
 
-        printf("Podales bledna liczbe sprobuj ponownie : ");
-    }
-    number1 = atoi(input1);
+    //     printf("Podales bledna liczbe sprobuj ponownie : ");
+    // }
+    // number1 = atoi(input1);
 
-    printf("Podaj mianownik: ");
+    // printf("Podaj mianownik: ");
 
-    while(1)
-    {
-        gets(input2);
+    // while(1)
+    // {
+    //     gets(input2);
 
-        if(isNumber(input2))
-            break;
+    //     if(isNumber(input2))
+    //         break;
 
-        printf("Podales bledna liczbe sprobuj ponownie : ");
-    }
-    number2 = atoi(input2);
-
-    struct Fraction test;
-    test.num = number1;
-    test.den = number2;
-
-    // printFraction(test);
-
+    //     printf("Podales bledna liczbe sprobuj ponownie : ");
+    // }
+    // number2 = atoi(input2);
 
     testprint();
 
-    // testprintFraction();
-
+    testprintFraction();
 }
