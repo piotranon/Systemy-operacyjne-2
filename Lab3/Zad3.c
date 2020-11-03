@@ -19,7 +19,7 @@ char *identity(const char *name,const char *surname)
     strcpy(result,name);
     strcat(result," ");
     strcat(result,surname);
-
+    strcat(result,"\0");
     return result;
 }
 
