@@ -1,0 +1,3 @@
+potezny odczyt pliku
+druga linia 
+trzecia tez
