@@ -14,6 +14,36 @@ void InputOutput()
     scanf("%f", &float_number);
     printf("Liczba zmienno-przecinkowa (float) : %f\n", float_number);
 
+
+    // char *test = malloc(20+1);
+    // scanf("%[^\n]", test);
+
+
+    // char *name = "name";
+    // char *surname = "surname";
+    // char *all = malloc(strlen(name)+strlen(surname)+1);
+
+    // int allindex=0;
+    // int nameindex=0;
+    // int surnameindex=0;
+
+    // for(nameindex;nameindex<strlen(name);nameindex++)
+    // {
+    //     all[allindex]=name[nameindex];
+    //     allindex++;
+    // }    
+
+    // for(surnameindex;surnameindex<strlen(surname);surnameindex++)
+    // {
+    //     all[allindex]=surname[surnameindex];
+    //     allindex++;
+    // }
+
+    // all[allindex]='/0';
+
+
+    // test[i] = '/0';
+
     char tekst[20];
     printf("Podaj tekst : ");
     scanf("%[^\n]", &tekst);
