@@ -1,22 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
-#include <unistd.h>
 
 void printHex(FILE *file)
 {
     char ch;
     while((ch = getc(file)) != EOF)
     {
-        if(ch == '\n')
-        {
-            printf("0A ");
-        }else
-        {
-            printf("%2x ",ch);
-        }
-        
+        printf("%.2x ",ch);
     }
 }
 
@@ -25,14 +16,7 @@ void printLinesHex(FILE *file)
     char ch;
     while((ch = getc(file)) != EOF)
     {
-        if(ch == '\n')
-        {
-            printf("0A\n");
-        }else
-        {
-            printf("%2x ",ch);
-        }
-        
+        printf("%.2x ",ch);
     }
 }
 void printChar(FILE *file)
