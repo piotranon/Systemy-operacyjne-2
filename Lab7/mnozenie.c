@@ -170,7 +170,7 @@ void main()
     // printf("\n\n");
     // multiply(99999, 88);
     // printf("\n\n");
-    // multiply(999999, 123); tu u balickiego wywala błąd (zle wypisuje gorne przesuniecia)
+    // multiply(999999, 123); tu w przykładzie wywala błąd (zle wypisuje gorne przesuniecia)
     // printf("\n\n");
     // multiply(54321, 1234);
     // printf("\n\n");

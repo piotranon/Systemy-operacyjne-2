@@ -16,15 +16,22 @@ int getdigit(int num, int n)
 }
 void main()
 {
-    int a, b;
-    // printf("a= ");
-    // scanf("%d", &a);
-    // printf("b= ");
-    // scanf("%d", &b);
-    // printf("\n");
+    char aInput[256];
+    char bInput[256];
 
-    a = 9237;
-    b = 1267;
+    printf("a= ");
+    fgets(aInput, sizeof(aInput), stdin);
+    printf("b= ");
+    fgets(bInput, sizeof(bInput), stdin);
+    printf("\n");
+
+    // a = 9237;
+    // b = 1267;
+
+    unsigned int a, b;
+
+    a = (unsigned int)strtol(aInput, NULL, 0);
+    b = (unsigned int)strtol(bInput, NULL, 0);
 
     if (b > a)
     {
@@ -37,7 +44,7 @@ void main()
         printf("no operation on negative numbers");
         return;
     }
-    int val = a + b;
+    unsigned int val = a + b;
 
     int aSize = (int)floor(log10(abs(a))) + 1;
     int bSize = (int)floor(log10(abs(b))) + 1;
