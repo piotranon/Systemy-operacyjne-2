@@ -176,7 +176,8 @@ void main()
     // printf("\n\n");
     // multiply(9999999, 88);
     // printf("\n\n");
-    multiply(99999999, 88);
+    // multiply(99999999, 88);
     // printf("\n\n");
     // multiply(999999999, 88);
+    // multiply(3456, 4567);  tu w przykładzie wywala błąd (zle wartosci u gory 4*7=28 powinno byc 2 przniesione 8 zapisane,w przykładzie 3 przeniesione 8 zapisane, w [3 mnozeniu * 1 liczba])
 }
