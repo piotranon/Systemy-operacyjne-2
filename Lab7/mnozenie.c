@@ -50,8 +50,6 @@ void multiply(unsigned int a, unsigned int b)
     {
 
         char **transferred = (char **)calloc(bSize, sizeof(char *));
-        // printf("xd: %u\n", sizeof(char *));
-        // printf("el: %u\n", sizeof(char));
         for (i = bSize - 1; i >= 0; i--)
         {
             // printf("i:%d\n", i);
@@ -68,14 +66,13 @@ void multiply(unsigned int a, unsigned int b)
                     multiplied = getdigit(b, i) * getdigit(a, j);
                     // printf("%d * %d = %d\n", getdigit(b, i), getdigit(a, j), multiplied);
                 }
-
                 else
                 {
                     multiplied = getdigit(b, i) * getdigit(a, j) + (transferred[i][j - 1] != ' ' ? transferred[i][j - 1] - '0' : 0);
                     // printf("%d * %d + %d = %d : .%c.\n", getdigit(b, i), getdigit(a, j), (transferred[i][j - 1] != ' ' ? transferred[i][j - 1] - '0' : 0), multiplied, transferred[i][j - 1]);
                 }
 
-                if (multiplied >= 10)
+                if (multiplied > 10)
                 {
                     // printf("dodanie : .%c.\n", ((multiplied / 10) + '0'));
                     transferred[i][j] = ((multiplied / 10) + '0');
@@ -126,15 +123,18 @@ void multiply(unsigned int a, unsigned int b)
             int val = getdigit(b, i) * a;
             int valSize = (int)floor(log10(abs(val))) + 1;
 
-            if (i == bSize - 1)
-                printf("+");
-            else
-                printf(" ");
+            if (val != 0)
+            {
+                if (i == bSize - 1)
+                    printf("+");
+                else
+                    printf(" ");
 
-            for (j = 0; j < valueSize - valSize + 1 - i; j++)
-                printf(" ");
+                for (j = 0; j < valueSize - valSize + 1 - i; j++)
+                    printf(" ");
 
-            printf("%d\n", val);
+                printf("%d\n", val);
+            }
         }
 
         // prints --------
@@ -157,12 +157,12 @@ void main()
     // printf("\n");
 
     // multiply(a,b);
-
+    // multiply(20, 10);
     // multiply(0, 0);
     // printf("\n\n");
     // multiply(12, 2);
     // printf("\n\n");
-    // multiply(372, 57);
+    multiply(372, 57);
     // printf("\n\n");
     // multiply(999, 73);
     // printf("\n\n");
