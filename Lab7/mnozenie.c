@@ -150,19 +150,19 @@ void multiply(unsigned int a, unsigned int b)
 void main()
 {
     int a, b;
-    // printf("a= ");
-    // scanf("%d", &a);
-    // printf("b= ");
-    // scanf("%d", &b);
-    // printf("\n");
+    printf("a= ");
+    scanf("%d", &a);
+    printf("b= ");
+    scanf("%d", &b);
+    printf("\n");
 
-    // multiply(a,b);
+    multiply(a, b);
     // multiply(20, 10);
     // multiply(0, 0);
     // printf("\n\n");
     // multiply(12, 2);
     // printf("\n\n");
-    multiply(372, 57);
+    // multiply(372, 57);
     // printf("\n\n");
     // multiply(999, 73);
     // printf("\n\n");
