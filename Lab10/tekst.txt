@@ -1,0 +1,14 @@
+Piotr Dlugosz to jest przykladowy plik testowy do zadania
+linia 2
+linia 3
+linia 4
+linia 5
+linia 6
+testowa linia 7 z dluzszym tekstem
+8 Piotr Dlugosz to jest przykladowy plik testowy do zadania
+linia 9
+linia 10
+linia 11
+linia 12
+linia 13
+testowa linia 15 z dluzszym tekstem

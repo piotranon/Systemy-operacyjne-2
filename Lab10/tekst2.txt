@@ -1,0 +1,10 @@
+linia
+12
+linia
+13
+testowa
+linia
+15
+z
+dluzszym
+tekstem
